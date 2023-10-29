@@ -5,7 +5,7 @@ There are 3 modes:
 ### 1) trivial mode
 This mode just generates in image of the specified size containing all the colors using the most trivial implementation.
 example commands:
-	`--width 4096 --height 4096 -n trivial1.png -m trivial`
+	```--width 4096 --height 4096 -n trivial1.png -m trivial```
 
 Note that the result image must have at least 16777216 pixels (otherwise it won't generate an image at all), but can have more.
 	
@@ -14,9 +14,9 @@ Note that the result image must have at least 16777216 pixels (otherwise it won'
 This mode creates an image whose pixels have random value. The user can pick the seed for the randomness, and for one particular seed, the program will  always generate the same random image. The user MUST specify the seed, as shown in the example.
 example commands:
 
-	`--width 4096 --height 4096 -n random1.png -m random --seed 10`
+	```--width 4096 --height 4096 -n random1.png -m random --seed 10
  
-	`--width 8192 --height 4096 -n random1.png -m random --seed 10`
+	--width 8192 --height 4096 -n random1.png -m random --seed 10```
 
 
 
