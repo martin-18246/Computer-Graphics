@@ -26,13 +26,10 @@ public class Options
     [Option('s', "seed", Required = false, HelpText = "Random seed (if relevant for mode 'random')")]
     public int? Seed { get; set; }
 
-    [Option("numCirclesVertical", Required = false, HelpText = "Random seed (if relevant for mode 'random')")]
+    [Option("numCirclesVertical", Required = false, HelpText = "How many circles will be on the vertical axis.")]
     public int? numCirclesVertical { get; set; }
 
-    //[Option("outerRadius", Required = false, HelpText = "Random seed (if relevant for mode 'random')")]
-    //public int? outerRadius { get; set; }
-
-    [Option("radiusWidth", Required = false, HelpText = "Random seed (if relevant for mode 'random')")]
+    [Option("radiusWidth", Required = false, HelpText = "Thickness of the circles.")]
     public int? radiusWidth { get; set; }
 }
 
@@ -50,7 +47,6 @@ class Program
     public static string mode = "trivial";
     public static int? seed;
     public static int? numCirclesVertical;
-    //public static int? outerRadius;
     public static int? radiusWidth;
 
     static void Main(string[] args)
@@ -102,7 +98,7 @@ class Program
             return;
         }
 
-        if (mode == "ornament" && (!opts.numCirclesVertical.HasValue /*|| !opts.outerRadius.HasValue*/ || !opts.radiusWidth.HasValue))
+        if (mode == "ornament" && (!opts.numCirclesVertical.HasValue || !opts.radiusWidth.HasValue))
         {
             Console.WriteLine("You must specify the properties of the circles.");
             Environment.Exit(0);
@@ -112,7 +108,6 @@ class Program
         else
         {
             numCirclesVertical = opts.numCirclesVertical;
-            //outerRadius = opts.outerRadius;
             radiusWidth = opts.radiusWidth;
         }
 
@@ -168,7 +163,7 @@ class Program
         }
     }
 
-    public static void FillRandom(int seed) // works, even with different resolution, basic takes 8 seconds
+    public static void FillRandom(int seed)
     {
         Random random = new Random(seed);
         int[,] arrayAllColors = CreateArrayAllColors();
@@ -194,7 +189,6 @@ class Program
 
                     if (count >= arrayInts.Length)
                     {
-                        //Console.WriteLine("this"); 
                         randomColor = SelectRandomColor(random);
                     }
 
@@ -268,7 +262,6 @@ class Program
             int numUsedColors = counter;
 
             Random random = new Random(seed);
-            //int[,] arrayAllColors = CreateArrayAllColors();
             int[] arrayInts = CreateArrayOfInts(maxNumColors, true, numUsedColors);
             arrayInts = ShuffleArray(arrayInts, random);
 
@@ -285,7 +278,7 @@ class Program
                         for (int x = 0; x < blockSize; x++)
                         {
 
-                            if (image[x1 * blockSize + x, y1 * blockSize + y].A == 0) // fill only pixels that are not filled yet
+                            if (image[x1 * blockSize + x, y1 * blockSize + y].A == 0)
                             {
                                 if (counterTotal % intervalPrintInfo == 0)
                                 {
@@ -377,7 +370,7 @@ class Program
         }
 
         float distanceToCenter = calculateDistance(centers[0, indexBox], centers[1, indexBox], x, y);
-        if (distanceToCenter >= outerRadius - circleWidth && distanceToCenter <= outerRadius || /*distanceToCenter >= outerRadius / 2 - circleWidth && */ distanceToCenter <= outerRadius / 4 )
+        if (distanceToCenter >= outerRadius - circleWidth && distanceToCenter <= outerRadius || distanceToCenter <= outerRadius / 4 )
         {
             return true;
         }
