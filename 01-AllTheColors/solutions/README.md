@@ -15,6 +15,7 @@ This mode creates an image whose pixels have random value. The user can pick the
 example commands:
 
 	`--width 4096 --height 4096 -n random1.png -m random --seed 10`
+ 
 	`--width 8192 --height 4096 -n random1.png -m random --seed 10`
 
 
@@ -24,5 +25,7 @@ This mode creates an image that contains a circle pattern. A grid of circles wil
 example commands:
 
 	`--width 4096 --height 4096 -n ornament1.png -m ornament --numCirclesVertical 1 --radiusWidth 500`
+ 
 	`--width 4096 --height 4096 -n ornament2.png -m ornament --numCirclesVertical 10 --radiusWidth 50`
+ 
 	`--width 4096 --height 4096 -n ornament3.png -m ornament --numCirclesVertical 20 --radiusWidth 10`
