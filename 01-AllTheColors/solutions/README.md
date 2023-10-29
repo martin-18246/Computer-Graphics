@@ -17,7 +17,7 @@ example commands:
 
 `--width 4096 --height 4096 -n random1.png -m random --seed 10`
  
-`--width 8192 --height 4096 -n random1.png -m random --seed 10`
+`--width 8192 --height 4096 -n random2.png -m random --seed 10`
 
 
 
