@@ -3,6 +3,7 @@ This program is an implementation of the 4th homework, Mandala.
 The program has two modes: normal and cursed.
 
 The user can modify these parameters:
+
 	- output file name `-o output.png`
  
 	- image width `-w 500`
