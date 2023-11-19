@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mandala", "Mandala\Mandala.csproj", "{0EF383E2-25DB-4B53-A9AC-93D6CB69EE13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EF383E2-25DB-4B53-A9AC-93D6CB69EE13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF383E2-25DB-4B53-A9AC-93D6CB69EE13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF383E2-25DB-4B53-A9AC-93D6CB69EE13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF383E2-25DB-4B53-A9AC-93D6CB69EE13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F49AB0A6-8685-40D4-A08A-36A092F5F771}
+	EndGlobalSection
+EndGlobal
