@@ -15,11 +15,16 @@ The user can modify these parameters:
 Here are some example prompts:
 Normal mode:
 `dotnet run -w 500 --height 500 -o output.png -n 8 -l 25 -d 50 -m normal -s 666`
+
 `dotnet run -w 500 --height 500 -o output.png -n 2 -l 25 -d 50 -m normal -s 666`
+
 `dotnet run -w 500 --height 500 -o output.png -n 2 -l 15 -d 75 -m normal -s 667`
+
 Cursed mode:
 `dotnet run -w 500 --height 500 -o output.png -n 8 -l 25 -d 50 -m cursed -s 666`
+
 `dotnet run -w 500 --height 500 -o output.png -n 1 -l 75 -d 150 -m cursed -s 666`
+
 
 	
 How the program works:
