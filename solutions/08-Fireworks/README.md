@@ -69,6 +69,7 @@ I had problems finding values of the linear and quadratic coefficients that woul
 There's a tree structure in the way how each object (launcher, particle, explosion, tail) has other objects assigned to it.
 Here's a template for the basic structure of the tree:
 
+```
 launcherA
     particleA
         explosionA
@@ -79,8 +80,10 @@ launcherA
                 EmptyExplosion
                 NoTail
         NoTail
+```
 
 As an example, here's a tree tree of an actual launcher from my program:
+```
 bigDoubleExplosiveLauncher
     DoubleExplosive
         explosiveParticleExplosion
@@ -94,3 +97,4 @@ bigDoubleExplosiveLauncher
                         NoTail
                 NoTail
         NoTail
+```
